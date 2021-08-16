@@ -1,0 +1,41 @@
+
+.button1 {
+  background-color: #009933; 
+  border: none;
+  color: white;
+ 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 0px 2px;
+  border-radius: 5px;
+  
+}
+.button {width: 150px;
+         
+		 }
+.button2{
+  background-color: #ff4000; 
+  border: none;
+  color: white;
+ 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 0px 2px;
+  border-radius: 5px;
+ 
+}
+.header{
+	background-color:Black;
+	color:white;
+	text-align :center;
+	 font-size: 50px;
+	 
+}
+
+	
+
+
