@@ -1,6 +1,6 @@
 <?php
 	include 'controllers/AdminController.php';
-	$ownerr = getAllDonars();
+	$ownerr = getallAdmin();
 	
 ?>
 <html>
@@ -89,8 +89,8 @@ tr:nth-child(even) {
 						echo "<td>".$o["password"]. "</td>";
 						echo "<td>".$o["nid"]. "</td>";
 						echo "<td>".$o["num"]. "</td>";
-						echo '<td><a href="editdonar.php?id='.$id.'" class="red"> Edit</a></td>';
-						echo '<td><a href="deletedonar.php?id='.$id.'"  class="red1">Delete</td>';
+						echo '<td><a href="editadmin.php?id='.$id.'" class="red"> Edit</a></td>';
+						echo '<td><a href="deleteadmin.php?id='.$id.'"  class="red1">Delete</td>';
 					echo "</tr>";
 					$i++;
 				}

@@ -18,6 +18,7 @@
 	$hasError=false;
 	
 	//pass
+	
 	function validPass($password)
 	 {
 		 $hasUpper=false;
@@ -220,6 +221,7 @@
 		if(empty($_POST["pass"]))
 		    {
 			 $err_pass="Password Required";
+			 
 			 $hasError=true;
 		    }
 			elseif(strlen($_POST["pass"])<8)
@@ -298,7 +300,7 @@
 			
 	
 			$rs = insertUser($name,$pass,$nid,$num);
-			if($rs === true){
+			if($name != "" && $pass != "" && $nid != "" && $num != ""){
 				header("Location:alldonar.php");
 			}
 			$err_db = $rs;

@@ -25,8 +25,8 @@
 			</div>
 			<div align = "center">
 			
-		<a  href="adddonar.php" class ="button button7">Add Admin</a>
-			<a  href="alldonar.php" class ="button button3">All Admin</a>
+		<a  href="addadmin.php" class ="button button7">Add Admin</a>
+			<a  href="alladmin.php" class ="button button3">All Admin</a>
 			
 			
 	

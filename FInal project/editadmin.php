@@ -1,7 +1,7 @@
 <?php 
 	include 'controllers/AdminController.php';
 	$id = $_GET["id"]; // vl pbo
-	$c = getDonar($id);
+	$c = getAdmin($id);
 ?>
 <html>
  

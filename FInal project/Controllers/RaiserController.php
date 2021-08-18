@@ -298,7 +298,7 @@
 			
 	
 			$rs = insertUser($name,$pass,$nid,$num);
-			if($rs === true){
+			if($name != "" && $pass != "" && $nid != "" && $num != ""){
 				header("Location:allraiser.php");
 			}
 			$err_db = $rs;

@@ -203,7 +203,7 @@
 		
 	}
 	//add owner
-	if(isset($_POST["add_donar"]))
+	if(isset($_POST["add_Admin"]))
 	{
 		
 		if(empty($_POST["name"]))
@@ -298,8 +298,8 @@
 			
 	
 			$rs = insertUser($name,$pass,$nid,$num);
-			if($rs === true){
-				header("Location:alldonar.php");
+			if($name != "" && $pass != "" && $nid != "" && $num != ""){
+				header("Location:alladmin.php");
 			}
 			$err_db = $rs;
 		
@@ -400,9 +400,9 @@
 
 			
 			
-		$rs =  updateDonar($_POST["name"],$_POST["pass"],$_POST["nid"],$_POST["num"],$_POST["id"]);
+		$rs =  updateAdmin($_POST["name"],$_POST["pass"],$_POST["nid"],$_POST["num"],$_POST["id"]);
 		if($rs === true){
-			header("Location: alldonar.php");
+			header("Location: alladmin.php");
 		}
 		$err_db = $rs;
 	}
@@ -422,17 +422,17 @@
 		return false;
 		
 	}
-	function getAllDonars(){
+	function getAllAdmin(){
 		$query = "select * from donarr order by name asc";
 		$rs = get($query);
 		return $rs;
 	}
-	function getDonar($id){
+	function getAdmin($id){
 		$query="select * from donarr where id = $id";
 		$rs = get($query);
 		return $rs[0];
 	}
-	function updateDonar($name,$pass,$nid,$num,$id)
+	function updateAdmin($name,$pass,$nid,$num,$id)
 	{
 		$query="update donarr set name='$name',password='$pass',nid='$nid',num='$num' where id= '$id'";
 		return execute($query);

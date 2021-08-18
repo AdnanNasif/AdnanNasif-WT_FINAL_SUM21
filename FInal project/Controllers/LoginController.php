@@ -9,25 +9,16 @@
 	$err_uname="";
 	$pass="";
 	$err_pass="";
-	$email="";
+	
 	$err_number="";
 	$ad="";
-	$err_ad="";
-	$gender="";
-	$err_gender="";
+	
+	
+	
 	$type="";
 	$hasError=false;
 	
-	function validateEmail($email)
-		{
-		$pos_at = strpos($email,"@");
-		$pos_dot = strpos($email,".",$pos_at+1);
-		if($pos_at < $pos_dot)
-			{
-			return true;
-			}
-		return false;
-		}
+	
 		
 	function validPass($password)
 	 {
@@ -131,19 +122,7 @@
 			$pass=$_POST["pass"];
 		     }
 		
-			if (empty($_POST["email"])){
-				$err_email="Email Required";
-				$hasError=true;
-			 }
-			elseif(!validateEmail($_POST["email"]))
-			{
-				$err_email="Not a valid email";
-				$hasError=true;
-			}
-			else
-			{
-				$email=htmlspecialchars($_POST["email"]);
-			}
+			
 			
 			if(empty($_POST["number"]))
 		   {
@@ -166,13 +145,7 @@
 			else{
 				$ad=htmlspecialchars($_POST["ad"]);
 			 }
-			if(!isset($_POST["gender"])){
-				$err_gender="Gender Required";
-				$hasError=true;
-			 }
-			else{
-				$gender=htmlspecialchars($_POST["gender"]);
-			 }
+			
 			if(!$hasError)
 		   {
 			  
